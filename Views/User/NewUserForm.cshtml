@@ -1,0 +1,41 @@
+﻿@model MVCMyApplication.Models.UserModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+        .bg{
+            background-image: url("../Content/background.jpg");
+            height: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        h2{
+            font-size: 36px;
+            align-content: center;
+        }
+        p{
+            font-size: 20px;
+            align-content: center;
+        }
+    </style>
+</head>
+<body class="bg">
+    <h2>New User Form</h2>
+    <form name="newEmployee" method="post">
+        <p>First Name: <input type="text" name="FirstName" id="FirstName" /></p>
+        <p>Last Name: <input type="text" name="LastName" id="LastName" /></p>
+        <p>Favorite Music Artist: <input type="text" name="FavoriteMusicArtist" id="FavoriteMusicArtist" /></p>
+        <p>Favorite Song: <input type="text" name="FavoriteSong" id="FavoriteSong" /></p>
+        <input type="submit" value="Submit User Info" />
+    </form>
+</body>
+</html>
+
