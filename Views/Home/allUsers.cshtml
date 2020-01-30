@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "Music Hut Staff";
+    string[] owners = { "Billy Bob, Joe Dirt" };
+    int ownersLen = owners.Length;
+    string[] managers = { "Jacob Hunt, Pete Stick, Andrew Pebble" };
+    int managerLen = managers.Length;
+    string[] employees = { "Kamile Henderson, Neelam Dillon, Bronte Whitehead, Claude Maldonado" };
+    int employeeLen = employees.Length;
+    var x = 0;
+}
+
+<hr />
+<h2>Music Hut Staff</h2>
+@for (x = 0; x < employeeLen; x++)
+{
+    <p>@employees[x]</p>
+}
+<hr />
+<h2>Music Hut Managers</h2>
+@foreach (var person in managers)
+{
+    <p>@person</p>
+}
+<hr />
+<h2>Music Hut Owners</h2>
+@{
+    x = 0;
+    while (x < ownersLen)
+    {
+        <p>@owners[x]</p>
+        x += 1;
+    }
+}
+<hr />

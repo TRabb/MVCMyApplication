@@ -1,0 +1,31 @@
+﻿@{ 
+    var weekday = DateTime.Now.DayOfWeek;
+    var day = weekday.ToString();
+    var message = "";
+}
+<html>
+<body>
+    @{
+        if (day == "Sunday")
+        {
+            message = "We are closed today.";
+        }
+        else
+        {
+            message = "We are open today.";
+        }
+    }
+    <h4>The Music Hut Hours</h4>
+
+    <h2>@message</h2>
+
+    <p>Monday: 9am-5pm</p>
+    <p>Tuesday: 9am-5pm</p>
+    <p>Wednesday: 9am-5pm</p>
+    <p>Thursday: 9am-5pm</p>
+    <p>Friday: 9am-6pm</p>
+    <p>Saturday: 10am-4pm</p>
+    <p>Sunday: Closed</p>
+
+</body>
+</html>

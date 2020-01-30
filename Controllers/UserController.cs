@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using MVCMyApplication.Models;
 
 namespace MVCMyApplication.Controllers
 {
@@ -27,15 +28,22 @@ namespace MVCMyApplication.Controllers
             return Content(input);
         }
         [HttpPost]
-        public ActionResult NewUser(string firstName, string lastName)
+        public ActionResult NewUser(string userFirst, string userLast, string userArtist, string userSong)
         {
-            ViewBag.Message = "Name: " + firstName + " " + lastName;
-            return View("ConfirmUser");
+            UserModel u = new UserModel()
+            {
+                FirstName = userFirst,
+                LastName = userLast,
+                FavoriteMusicArtist = userArtist,
+                FavoriteSong = userSong
+            };
+            return View("ConfirmUser", u);
         }
 
         public ActionResult NewUser()
         {
             return View("NewUserForm");
         }
+
     }
 }

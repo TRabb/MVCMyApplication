@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using MVCMyApplication.Models;
 
 namespace MVCMyApplication.Controllers
 {
@@ -24,6 +25,16 @@ namespace MVCMyApplication.Controllers
         {
             ViewBag.Message = "Your contact page.";
 
+            return View();
+        }
+
+        public ActionResult allUsers()
+        {
+            return View();
+        }
+
+        public ActionResult hutSchedule()
+        {
             return View();
         }
     }
